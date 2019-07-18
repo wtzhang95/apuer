@@ -1,0 +1,16 @@
+./redirector.sh: 2: ./redirector.sh: t: not found
+2019年 07月 07日 星期日 17:48:40 CST
+1
+a
+aaa
+fcntldemo
+fcntldemo.c
+red2.log
+red3.log
+red4.log
+redirector.sh
+test
+/home/wtzhang/linux_basic/apue_practice/2_8
+/home/wtzhang/linux_basic/apue_practice/2_8
+2019年 07月 07日 星期日 17:48:40 CST
+./redirector.sh: 8: ./redirector.sh: tt: not found

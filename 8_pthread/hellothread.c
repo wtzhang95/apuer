@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+#include<string.h>
+
+void* th_fn(void *arg);
+
+int main(){
+    int err;
+    pthread_t allen,bob;
+    char *name1="allen";
+    char *name2="bob";
+
+    if(pthread_create(&allen,NULL,th_fn,(void*)name1)!=0){
+        perror("pthread_create");
+        return -1;
+    }
+
+    if(pthread_create(&bob,NULL,th_fn,(void*)name2)!=0){
+        perror("pthread_create");
+        return -1;
+    }
+    sleep(3);
+    printf("allen id:%lx\n",allen);
+    printf("bob id:%lx\n",bob);
+    return 0;
+}
+
+void* th_fn(void *arg){
+    char* name = (char*)arg;
+    int i;
+    for(i=1;i<=10;++i){
+        printf("%s:%d\n",name,i);
+        if (strcmp("Allen",name)==0)
+            usleep(10000*10);
+        else
+            usleep(100*5);
+    }
+    return NULL;
+}

@@ -1,0 +1,4 @@
+./redirector.sh: 2: ./redirector.sh: t: not found
+./redirector.sh: 2: ./redirector.sh: t: not found
+./redirector.sh: 2: ./redirector.sh: t: not found
+./redirector.sh: 4: ./redirector.sh: tt: not found
